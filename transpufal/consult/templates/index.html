@@ -1,0 +1,20 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+<h1>TranspUFAL</h1>
+
+  <p>Bem-vindo(a) ao <em>TRANSPUFAL</em>, uma plataforma de transparência de processos administrativos para docentes, e, futuramente, discentes.</p>
+
+<h2>Dynamic content</h2>
+
+  <p>A TranspUFAL registrou:</p>
+  <ul>
+      <li><strong>Processos:</strong> {{num_processes}}</li>
+      <li><strong>Processos finalizados:</strong> {{num_finished_processes}}</li>
+  </ul>
+  <p> Você visitou essa página {{num_visits}}{% if num_visits == 1 %} vez{% else %} vezes{% endif %}.</p>
+
+{% endblock %}
+
+{% load static %}
+<link rel="stylesheet" href="{%static 'css/styles.css'}">

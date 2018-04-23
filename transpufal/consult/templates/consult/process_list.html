@@ -1,0 +1,16 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Lista de Processos</h1>
+  {% if process_list %}
+  <ul>
+    {% for process in process_list %}
+    <li>
+        <a href="{{ process.get_absolute_url }}">{{process.name}}</a> ({{process.category}})
+    </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>Não há processos no sistema.</p>
+  {% endif %}
+{% endblock %}

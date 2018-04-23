@@ -1,0 +1,13 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Nome: {{process.name}}</h1>
+
+  <p><strong>Número do Processo:</strong> {{process.idcode}}</p>
+  <p><strong>Dada de registro:</strong> {{process.date}}</p>
+  <p><a href='{{process.archive}}'>Download dos documentos do processo</a></p>
+  <p><strong>Tipo de processo:</strong> {{process.category}}</p>
+  <p><strong>Tipo de processo:</strong> {{process.archive}}</p>
+  <p><strong>Status do processo:</strong> {{process.status}}</p>
+
+{% endblock%}
